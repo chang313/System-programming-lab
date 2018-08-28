@@ -10,7 +10,18 @@ initialize the pointers to NULL,
 set the key value to the key provided by the argument
  */
 struct list_node *allocate_node_with_key(int key)
-{
+{ 
+    struct list_node node;
+    node.next = (struct list_node*)malloc(sizeof(struct list_node));
+    node.prev = (struct list_node*)malloc(sizeof(struct list_node));
+    free(node.next);
+    free(node.prev);
+    node.key = key;
+
+    return node;
+
+
+
 }
 
 /*	

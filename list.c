@@ -49,8 +49,7 @@ Remove the *node* from the list
 void del_node (struct list_node *node)
 {	struct list_node *prev_node = node->prev;
 	struct list_node *next_node = node->next;
-	free(node->prev);
-	free(node->next);
+	free(node);
 	prev_node->next = next_node;
 	next_node->prev = prev_node;
 }

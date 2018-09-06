@@ -150,7 +150,7 @@ TEST(DoublyLinkedListTest, InsertThenSearchDelete) {
 	}
 
 	struct list_node *node = NULL;
-
+	
 	// Check Search functionality
 	for (int i = 10; i > 0; i--) {
 		node = search_list(head, i);
